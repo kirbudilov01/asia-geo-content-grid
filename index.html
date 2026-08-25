@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Азия: страны и города для контент-сетки</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__content">
+          <div class="hero__bar">
+            <p class="eyebrow" data-i18n="eyebrow">Гео-сетка</p>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Переключить язык">EN</button>
+          </div>
+          <h1 data-i18n="title">Азия для контент-завода</h1>
+          <p class="lead" data-i18n="lead">Страны, города и темы, которые можно быстро разложить на Reels, Shorts и TikTok-серии.</p>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Фильтры">
+        <button class="filter is-active" data-filter="all" type="button"></button>
+        <button class="filter" data-filter="thailand" type="button"></button>
+        <button class="filter" data-filter="vietnam" type="button"></button>
+        <button class="filter" data-filter="indonesia" type="button"></button>
+        <button class="filter" data-filter="india" type="button"></button>
+        <button class="filter" data-filter="philippines" type="button"></button>
+      </section>
+
+      <section class="summary" aria-label="Сводка">
+        <article>
+          <span data-i18n="countriesLabel">Стран</span>
+          <strong id="countryCount">5</strong>
+        </article>
+        <article>
+          <span data-i18n="citiesLabel">Городов</span>
+          <strong id="cityCount">15</strong>
+        </article>
+        <article>
+          <span data-i18n="topicsLabel">Тем для первых тестов</span>
+          <strong id="topicCount">24</strong>
+        </article>
+      </section>
+
+      <section class="grid" id="countryGrid" aria-label="Страны и города"></section>
+
+      <section class="angles">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="anglesEyebrow">Что снимать первым</p>
+          <h2 data-i18n="anglesTitle">Темы, которые цепляют в азиатской географии</h2>
+        </div>
+        <div class="angle-grid" id="angleGrid"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
