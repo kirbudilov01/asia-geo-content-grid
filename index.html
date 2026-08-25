@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Азия: страны и города для контент-сетки</title>
+    <title>Азия: регионы, страны и города для контент-сетки</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -22,29 +22,29 @@
 
       <section class="toolbar" aria-label="Фильтры">
         <button class="filter is-active" data-filter="all" type="button"></button>
-        <button class="filter" data-filter="thailand" type="button"></button>
-        <button class="filter" data-filter="vietnam" type="button"></button>
-        <button class="filter" data-filter="indonesia" type="button"></button>
-        <button class="filter" data-filter="india" type="button"></button>
-        <button class="filter" data-filter="philippines" type="button"></button>
+        <button class="filter" data-filter="southeast" type="button"></button>
+        <button class="filter" data-filter="south" type="button"></button>
+        <button class="filter" data-filter="east" type="button"></button>
+        <button class="filter" data-filter="central" type="button"></button>
+        <button class="filter" data-filter="west" type="button"></button>
       </section>
 
       <section class="summary" aria-label="Сводка">
         <article>
+          <span data-i18n="regionsLabel">Регионов</span>
+          <strong id="regionCount">5</strong>
+        </article>
+        <article>
           <span data-i18n="countriesLabel">Стран</span>
-          <strong id="countryCount">5</strong>
+          <strong id="countryCount">29</strong>
         </article>
         <article>
           <span data-i18n="citiesLabel">Городов</span>
-          <strong id="cityCount">15</strong>
-        </article>
-        <article>
-          <span data-i18n="topicsLabel">Тем для первых тестов</span>
-          <strong id="topicCount">24</strong>
+          <strong id="cityCount">70</strong>
         </article>
       </section>
 
-      <section class="grid" id="countryGrid" aria-label="Страны и города"></section>
+      <section class="grid" id="regionGrid" aria-label="Регионы, страны и города"></section>
 
       <section class="angles">
         <div class="section-head">

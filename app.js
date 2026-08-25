@@ -1,164 +1,176 @@
 const copy = {
   ru: {
     eyebrow: "Гео-сетка",
-    title: "Азия для контент-завода",
-    lead: "Страны, города и темы, которые можно быстро разложить на Reels, Shorts и TikTok-серии.",
+    title: "Азия по регионам",
+    lead: "Макрорегионы, страны, города и контент-заходы: чтобы быстро разложить Азию на Reels, Shorts и TikTok-серии.",
+    regionsLabel: "Регионов",
     countriesLabel: "Стран",
     citiesLabel: "Городов",
-    topicsLabel: "Тем для первых тестов",
     anglesEyebrow: "Что снимать первым",
     anglesTitle: "Темы, которые цепляют в азиатской географии",
+    countriesTitle: "Страны в фокусе",
     citiesTitle: "Города для разведки",
     signalsTitle: "Первые заходы",
     filters: {
-      all: "Все",
-      thailand: "Таиланд",
-      vietnam: "Вьетнам",
-      indonesia: "Индонезия",
-      india: "Индия",
-      philippines: "Филиппины"
+      all: "Все регионы",
+      southeast: "Юго-Восточная Азия",
+      south: "Южная Азия",
+      east: "Восточная Азия",
+      central: "Центральная Азия",
+      west: "Западная Азия"
     }
   },
   en: {
     eyebrow: "Geo grid",
-    title: "Asia for the content factory",
-    lead: "Countries, cities and angles that can quickly become Reels, Shorts and TikTok series.",
+    title: "Asia by regions",
+    lead: "Macro-regions, countries, cities and content angles for turning Asia into Reels, Shorts and TikTok series.",
+    regionsLabel: "Regions",
     countriesLabel: "Countries",
     citiesLabel: "Cities",
-    topicsLabel: "First-test topics",
     anglesEyebrow: "What to shoot first",
     anglesTitle: "Angles that work across Asian geographies",
+    countriesTitle: "Countries in focus",
     citiesTitle: "Cities to scout",
     signalsTitle: "First angles",
     filters: {
-      all: "All",
-      thailand: "Thailand",
-      vietnam: "Vietnam",
-      indonesia: "Indonesia",
-      india: "India",
-      philippines: "Philippines"
+      all: "All regions",
+      southeast: "Southeast Asia",
+      south: "South Asia",
+      east: "East Asia",
+      central: "Central Asia",
+      west: "West Asia"
     }
   }
 };
 
-const countries = [
+const regions = [
   {
-    id: "thailand",
-    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=80",
+    id: "southeast",
+    image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1400&q=80",
     ru: {
-      name: "Таиланд",
-      tagline: "Самый понятный вход в Юго-Восточную Азию: релокация, зимовка, туризм, цены, острова.",
-      cities: ["Бангкок", "Пхукет", "Паттайя", "Чиангмай", "Самуи", "Краби", "Хуа Хин", "Ко Панган"],
+      name: "Юго-Восточная Азия",
+      tagline: "Главная зона для релокации, зимовки, туризма, островов, дешевой жизни и быстрых контрастов.",
+      countries: ["Таиланд", "Вьетнам", "Индонезия", "Филиппины", "Малайзия", "Сингапур", "Камбоджа"],
+      cities: ["Бангкок", "Пхукет", "Паттайя", "Самуи", "Чиангмай", "Хошимин", "Ханой", "Дананг", "Нячанг", "Бали", "Чангу", "Убуд", "Джакарта", "Манила", "Себу", "Куала-Лумпур", "Сингапур"],
       signals: [
-        "Сравнение жизни у моря и в столице.",
-        "Сколько стоит нормальный месяц без иллюзий.",
-        "Где туристический рай превращается в бытовую рутину."
+        "Где жизнь у моря реально удобна, а где это только картинка.",
+        "Почему один город подходит для отдыха, другой для работы, третий для жизни.",
+        "Сравнение цен, виз, аренды, медицины, интернета и районов без туристической романтики."
       ]
     },
     en: {
-      name: "Thailand",
-      tagline: "The easiest entry point into Southeast Asia: relocation, wintering, tourism, prices and islands.",
-      cities: ["Bangkok", "Phuket", "Pattaya", "Chiang Mai", "Koh Samui", "Krabi", "Hua Hin", "Koh Phangan"],
+      name: "Southeast Asia",
+      tagline: "The main zone for relocation, wintering, tourism, islands, lower costs and fast contrasts.",
+      countries: ["Thailand", "Vietnam", "Indonesia", "Philippines", "Malaysia", "Singapore", "Cambodia"],
+      cities: ["Bangkok", "Phuket", "Pattaya", "Koh Samui", "Chiang Mai", "Ho Chi Minh City", "Hanoi", "Da Nang", "Nha Trang", "Bali", "Canggu", "Ubud", "Jakarta", "Manila", "Cebu", "Kuala Lumpur", "Singapore"],
       signals: [
-        "Seaside life versus the capital.",
-        "What a normal month really costs.",
-        "Where the tourist dream turns into daily routine."
+        "Where seaside life is actually convenient, and where it is only a picture.",
+        "Why one city works for vacation, another for work, and another for real life.",
+        "Prices, visas, rent, medicine, internet and districts without tourist romance."
       ]
     }
   },
   {
-    id: "vietnam",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    id: "south",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1400&q=80",
     ru: {
-      name: "Вьетнам",
-      tagline: "Быстрый рост, плотные города, сильная уличная экономика и контраст между севером и югом.",
-      cities: ["Хошимин", "Ханой", "Дананг", "Нячанг", "Хойан", "Далат", "Фукуок", "Хайфон"],
+      name: "Южная Азия",
+      tagline: "Огромные рынки, масштаб, контрасты, IT, духовный туризм, океанские направления и плотная городская жизнь.",
+      countries: ["Индия", "Шри-Ланка", "Непал", "Бангладеш", "Пакистан", "Мальдивы"],
+      cities: ["Дели", "Мумбаи", "Бангалор", "Гоа", "Ченнаи", "Хайдарабад", "Пуна", "Джайпур", "Коломбо", "Галле", "Катманду", "Дакка", "Карачи", "Лахор", "Мале"],
       signals: [
-        "Почему Вьетнам стал новым магнитом для экспатов.",
-        "Город, где все едет, торгует и строится одновременно.",
-        "Дананг как мягкий формат Азии для первого переезда."
+        "Как выглядит рынок, где один город больше некоторых стран.",
+        "IT-Азия против туристической Азии: Бангалор, Дели, Гоа и Шри-Ланка как разные вселенные.",
+        "Почему красивые места не всегда простые для быта, документов и долгой жизни."
       ]
     },
     en: {
-      name: "Vietnam",
-      tagline: "Fast growth, dense cities, street economy and a clear north-south contrast.",
-      cities: ["Ho Chi Minh City", "Hanoi", "Da Nang", "Nha Trang", "Hoi An", "Da Lat", "Phu Quoc", "Haiphong"],
+      name: "South Asia",
+      tagline: "Huge markets, scale, contrasts, IT, spiritual travel, ocean destinations and dense city life.",
+      countries: ["India", "Sri Lanka", "Nepal", "Bangladesh", "Pakistan", "Maldives"],
+      cities: ["Delhi", "Mumbai", "Bengaluru", "Goa", "Chennai", "Hyderabad", "Pune", "Jaipur", "Colombo", "Galle", "Kathmandu", "Dhaka", "Karachi", "Lahore", "Male"],
       signals: [
-        "Why Vietnam became a new expat magnet.",
-        "A city where everything moves, sells and gets built at once.",
-        "Da Nang as a softer first step into Asia."
+        "What a market looks like when one city is bigger than some countries.",
+        "IT Asia versus tourist Asia: Bengaluru, Delhi, Goa and Sri Lanka as different worlds.",
+        "Why beautiful places are not always easy for daily life, documents and long stays."
       ]
     }
   },
   {
-    id: "indonesia",
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    id: "east",
+    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1400&q=80",
     ru: {
-      name: "Индонезия",
-      tagline: "Бали как витрина, Джакарта как реальность: креаторы, удаленка, трафик, аренда, комьюнити.",
-      cities: ["Бали", "Джакарта", "Чангу", "Убуд", "Денпасар", "Сурабая", "Джокьякарта", "Ломбок"],
+      name: "Восточная Азия",
+      tagline: "Технологии, дисциплина, мегаполисы, дорогая жизнь, суперсервисы и сильные культурные коды.",
+      countries: ["Япония", "Южная Корея", "Китай", "Тайвань", "Гонконг", "Монголия"],
+      cities: ["Токио", "Осака", "Киото", "Сеул", "Пусан", "Пекин", "Шанхай", "Шэньчжэнь", "Гуанчжоу", "Тайбэй", "Гонконг", "Улан-Батор"],
       signals: [
-        "Бали как мечта и как перегретый рынок.",
-        "Чем реальная Индонезия отличается от картинки в соцсетях.",
-        "Почему креаторы едут туда, где уже слишком много креаторов."
+        "Почему тут удобно как в будущем, но дорого и не всегда просто влиться.",
+        "Мегаполис как продукт: транспорт, сервисы, безопасность, аренда и правила.",
+        "Культурный шок без клише: что реально удивляет после первого месяца."
       ]
     },
     en: {
-      name: "Indonesia",
-      tagline: "Bali as the showcase, Jakarta as the reality: creators, remote work, traffic, rent and communities.",
-      cities: ["Bali", "Jakarta", "Canggu", "Ubud", "Denpasar", "Surabaya", "Yogyakarta", "Lombok"],
+      name: "East Asia",
+      tagline: "Technology, discipline, megacities, high costs, super-services and strong cultural codes.",
+      countries: ["Japan", "South Korea", "China", "Taiwan", "Hong Kong", "Mongolia"],
+      cities: ["Tokyo", "Osaka", "Kyoto", "Seoul", "Busan", "Beijing", "Shanghai", "Shenzhen", "Guangzhou", "Taipei", "Hong Kong", "Ulaanbaatar"],
       signals: [
-        "Bali as a dream and as an overheated market.",
-        "How real Indonesia differs from the social media image.",
-        "Why creators move to places already packed with creators."
+        "Why it can feel like the future, but expensive and hard to enter.",
+        "The city as a product: transport, services, safety, rent and rules.",
+        "Culture shock without cliches: what actually surprises after a month."
       ]
     }
   },
   {
-    id: "india",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
+    id: "central",
+    image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=1400&q=80",
     ru: {
-      name: "Индия",
-      tagline: "Гигантский рынок: мегаполисы, технологии, контрасты, сервисы, образование и внутренняя миграция.",
-      cities: ["Дели", "Мумбаи", "Бангалор", "Гоа", "Ченнаи", "Хайдарабад", "Пуна", "Джайпур"],
+      name: "Центральная Азия",
+      tagline: "Близкая Азия для русскоязычной аудитории: рост городов, релокация, рынки, аренда, новые сервисы.",
+      countries: ["Казахстан", "Узбекистан", "Кыргызстан", "Таджикистан", "Туркменистан"],
+      cities: ["Алматы", "Астана", "Шымкент", "Ташкент", "Самарканд", "Бухара", "Бишкек", "Ош", "Душанбе", "Ашхабад"],
       signals: [
-        "Как живет страна, где масштаб чувствуется в каждом квартале.",
-        "Бангалор как азиатская технологическая фабрика.",
-        "Гоа не только пляжи: почему туда едут работать и пережидать."
+        "Почему эти города стали ближе, чем кажется: язык, деньги, работа, документы.",
+        "Где рынок растет быстрее инфраструктуры и что это меняет для жизни.",
+        "Сравнение Алматы, Ташкента и Бишкека как трех разных сценариев переезда."
       ]
     },
     en: {
-      name: "India",
-      tagline: "A massive market: megacities, technology, contrasts, services, education and internal migration.",
-      cities: ["Delhi", "Mumbai", "Bengaluru", "Goa", "Chennai", "Hyderabad", "Pune", "Jaipur"],
+      name: "Central Asia",
+      tagline: "A close Asian region for Russian-speaking audiences: city growth, relocation, markets, rent and new services.",
+      countries: ["Kazakhstan", "Uzbekistan", "Kyrgyzstan", "Tajikistan", "Turkmenistan"],
+      cities: ["Almaty", "Astana", "Shymkent", "Tashkent", "Samarkand", "Bukhara", "Bishkek", "Osh", "Dushanbe", "Ashgabat"],
       signals: [
-        "How a country lives when scale is visible on every block.",
-        "Bengaluru as Asia's technology factory.",
-        "Goa beyond beaches: why people go there to work and reset."
+        "Why these cities feel closer than expected: language, money, work and documents.",
+        "Where the market grows faster than infrastructure and how it changes daily life.",
+        "Almaty, Tashkent and Bishkek as three different relocation scenarios."
       ]
     }
   },
   {
-    id: "philippines",
-    image: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1200&q=80",
+    id: "west",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=80",
     ru: {
-      name: "Филиппины",
-      tagline: "Островная жизнь, английский язык, сервисная экономика и сильный контраст Манилы с курортами.",
-      cities: ["Манила", "Себу", "Боракай", "Давао", "Эль-Нидо", "Палаван", "Бохол", "Сиаргао"],
+      name: "Западная Азия и Ближний Восток",
+      tagline: "Деньги, хабы, жара, визы, недвижимость, премиальный сервис и резкий контраст между странами.",
+      countries: ["ОАЭ", "Турция", "Катар", "Саудовская Аравия", "Грузия", "Армения", "Азербайджан"],
+      cities: ["Дубай", "Абу-Даби", "Доха", "Эр-Рияд", "Джидда", "Стамбул", "Анталья", "Тбилиси", "Батуми", "Ереван", "Баку"],
       signals: [
-        "Почему Филиппины проще для первого общения, но сложнее в быту.",
-        "Манила против островов: две разные страны в одной.",
-        "Где заканчивается отпуск и начинается реальная инфраструктура."
+        "Дубай как витрина: что за кадром, если жить не неделю, а год.",
+        "Где релокация про комфорт, а где про налоги, бизнес и статус.",
+        "Почему один регион может быть одновременно дорогим, удобным и очень разным по правилам."
       ]
     },
     en: {
-      name: "Philippines",
-      tagline: "Island life, English, service economy and a sharp contrast between Manila and the resorts.",
-      cities: ["Manila", "Cebu", "Boracay", "Davao", "El Nido", "Palawan", "Bohol", "Siargao"],
+      name: "West Asia and the Middle East",
+      tagline: "Money, hubs, heat, visas, real estate, premium service and sharp country-to-country contrasts.",
+      countries: ["UAE", "Turkey", "Qatar", "Saudi Arabia", "Georgia", "Armenia", "Azerbaijan"],
+      cities: ["Dubai", "Abu Dhabi", "Doha", "Riyadh", "Jeddah", "Istanbul", "Antalya", "Tbilisi", "Batumi", "Yerevan", "Baku"],
       signals: [
-        "Why the Philippines are easier to enter socially but harder in daily life.",
-        "Manila versus the islands: two different countries in one.",
-        "Where vacation ends and real infrastructure begins."
+        "Dubai as a showcase: what is behind the picture if you stay for a year, not a week.",
+        "Where relocation is about comfort, and where it is about taxes, business and status.",
+        "Why one region can be expensive, convenient and very different by rules at the same time."
       ]
     }
   }
@@ -166,32 +178,32 @@ const countries = [
 
 const angles = {
   ru: [
-    ["Переезд без романтики", "Что человек узнает только после первого месяца жизни в стране."],
-    ["Город против острова", "Где красиво жить, а где реально удобно работать и решать бытовые задачи."],
-    ["Цены без мифов", "Аренда, еда, транспорт, связь, медицина и неожиданные расходы."],
-    ["Безопасность и быт", "Что волнует людей сильнее красивых видов: районы, дороги, медицина, документы."],
-    ["Экспаты и местные", "Где появляется нормальная среда, а где человек остается туристом."],
-    ["Недвижимость", "Почему вид из окна не равен хорошей покупке или аренде."],
-    ["Работа и удаленка", "Интернет, коворкинги, часовые пояса, дисциплина, визовые ограничения."],
-    ["Антиоткрытка", "Один сильный контраст: картинка из соцсетей против того, как оно устроено на земле."]
+    ["Регион против страны", "Почему нельзя говорить просто “Азия”: ЮВА, Южная Азия и Ближний Восток дают разные сценарии жизни."],
+    ["Город как продукт", "Транспорт, район, медицина, аренда, интернет и документы важнее красивого вида."],
+    ["Переезд без романтики", "Что человек понимает только после первого месяца: шум, жара, правила, платежи, быт."],
+    ["Дешево или удобно", "Где низкая цена компенсируется сложностью, а где дорого, но все работает."],
+    ["Турист против резидента", "Один и тот же город может быть раем на неделю и тяжелым местом на год."],
+    ["Куда ехать первым", "Стартовые города для разведки: Бангкок, Дананг, Бали, Алматы, Дубай, Тбилиси."],
+    ["Рынок растет быстрее города", "Где спрос, аренда и миграция обгоняют дороги, школы, медицину и сервисы."],
+    ["Антиоткрытка", "Берем красивую картинку региона и показываем, что нужно проверить до переезда."]
   ],
   en: [
-    ["Relocation without romance", "What people only learn after the first month in the country."],
-    ["City versus island", "Where it looks beautiful, and where it is actually easy to work and live."],
-    ["Prices without myths", "Rent, food, transport, mobile plans, healthcare and hidden costs."],
-    ["Safety and daily life", "What matters more than views: districts, roads, medicine and documents."],
-    ["Expats and locals", "Where a real environment appears, and where a person stays a tourist."],
-    ["Real estate", "Why a nice view does not equal a good rental or purchase."],
-    ["Work and remote life", "Internet, coworkings, time zones, discipline and visa limits."],
-    ["Anti-postcard", "One strong contrast: the social media picture versus how the place works on the ground."]
+    ["Region versus country", "Why you cannot simply say “Asia”: Southeast Asia, South Asia and the Middle East create different life scenarios."],
+    ["The city as a product", "Transport, district, healthcare, rent, internet and documents matter more than the view."],
+    ["Relocation without romance", "What people learn only after the first month: noise, heat, rules, payments and daily life."],
+    ["Cheap or convenient", "Where low cost comes with complexity, and where it is expensive but works."],
+    ["Tourist versus resident", "The same city can be paradise for a week and hard for a year."],
+    ["Where to go first", "Starter scouting cities: Bangkok, Da Nang, Bali, Almaty, Dubai and Tbilisi."],
+    ["The market outruns the city", "Where demand, rent and migration grow faster than roads, schools, healthcare and services."],
+    ["Anti-postcard", "Take the beautiful regional picture and show what must be checked before moving."]
   ]
 };
 
-const grid = document.querySelector("#countryGrid");
-const angleGrid = document.querySelector("#angleGrid");
-const cityCount = document.querySelector("#cityCount");
+const grid = document.querySelector("#regionGrid");
+const regionCount = document.querySelector("#regionCount");
 const countryCount = document.querySelector("#countryCount");
-const topicCount = document.querySelector("#topicCount");
+const cityCount = document.querySelector("#cityCount");
+const angleGrid = document.querySelector("#angleGrid");
 const filters = [...document.querySelectorAll(".filter")];
 const langToggle = document.querySelector("#langToggle");
 
@@ -201,7 +213,7 @@ let activeFilter = "all";
 function renderPage() {
   const strings = copy[activeLang];
   document.documentElement.lang = activeLang;
-  document.title = activeLang === "ru" ? "Азия: страны и города для контент-сетки" : "Asia: countries and cities for the content grid";
+  document.title = activeLang === "ru" ? "Азия: регионы, страны и города для контент-сетки" : "Asia: regions, countries and cities for the content grid";
   document.querySelectorAll("[data-i18n]").forEach((item) => {
     item.textContent = strings[item.dataset.i18n] || "";
   });
@@ -210,28 +222,36 @@ function renderPage() {
     button.classList.toggle("is-active", button.dataset.filter === activeFilter);
   });
   langToggle.textContent = activeLang === "ru" ? "EN" : "RU";
-  renderCountries();
+  renderRegions();
   renderAngles();
 }
 
-function renderCountries() {
-  const visible = countries.filter((country) => activeFilter === "all" || country.id === activeFilter);
-  grid.innerHTML = visible.map(countryCard).join("");
-  countryCount.textContent = visible.length;
-  cityCount.textContent = visible.reduce((sum, item) => sum + item[activeLang].cities.length, 0);
-  topicCount.textContent = angles[activeLang].length * 3;
+function visibleRegions() {
+  return regions.filter((region) => activeFilter === "all" || region.id === activeFilter);
 }
 
-function countryCard(country) {
-  const data = country[activeLang];
+function renderRegions() {
+  const visible = visibleRegions();
+  grid.innerHTML = visible.map(regionCard).join("");
+  regionCount.textContent = visible.length;
+  countryCount.textContent = visible.reduce((sum, item) => sum + item[activeLang].countries.length, 0);
+  cityCount.textContent = visible.reduce((sum, item) => sum + item[activeLang].cities.length, 0);
+}
+
+function regionCard(region) {
+  const data = region[activeLang];
   const strings = copy[activeLang];
   return `
     <article class="country-card">
-      <div class="country-card__top" style="background-image: url('${country.image}')">
+      <div class="country-card__top" style="background-image: url('${region.image}')">
         <h3>${data.name}</h3>
         <p class="tagline">${data.tagline}</p>
       </div>
       <div class="country-card__body">
+        <p class="label">${strings.countriesTitle}</p>
+        <div class="cities countries">
+          ${data.countries.map((country) => `<span class="city">${country}</span>`).join("")}
+        </div>
         <p class="label">${strings.citiesTitle}</p>
         <div class="cities">
           ${data.cities.map((city) => `<span class="city">${city}</span>`).join("")}
